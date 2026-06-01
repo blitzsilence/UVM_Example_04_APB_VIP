@@ -17,56 +17,40 @@ UVM testbench environment practice for a simple APB VIP
     │   └── dut.sv
     │
     ├── sim
-    │   ├── Makefile
-    │   └── runlist
+    │   └── Makefile
     │ 
     └── tb
         ├── env
-        │   ├── agent.sv
-        │   ├── env.sv
-        │   ├── monitor.sv
-        │   ├── ref_model.sv
-        │   ├── scoreboard.sv
-        │   ├── sequencer.sv
-        │   ├── sequencer.sv
-        │   └── transaction.sv
+        │   ├── apb_agent.sv
+        │   ├── apb_coverage.sv
+        │   ├── apb_driver.sv
+        │   ├── apb_env.sv
+        │   ├── apb_monitor.sv
+        │   ├── apb_ref_model.sv
+        │   ├── apb_scoreboard.sv
+        │   ├── apb_sequencer.sv
+        │   ├── apb_sequence.sv
+        │   └── apb_transaction.sv
         │ 
         ├── interface
-        │   └── interface.sv
+        │   └── apb_interface.sv
         │
         ├── package
-        │   └── env_pkg.sv
+        │   └── apb_pkg.sv
         │ 
-        ├── register
-        │   ├── adapter.sv
-        │   └── reg_model.sv
-        │ 
-        ├── sequence
-        │   ├── sequence_bus.sv
-        │   └── sequencer_dut.sv
-        │   ├── v_sequence.sv
-        │   └── v_sequencer.sv
-
-
         ├── testcase
-        │   ├── base_test.sv
-        │   ├── my_case1.sv
-        │   └── my_case1.sv
+        │   └── base_test.sv
         │        
         └── top
-            ├── tb_top.sv
             ├── rtl.f
-            └── tb.f
+            ├── tb.f
+            └── tb_top.sv
 ```
 
 ## Makefile excution
 make comp 
 
-make all TESTNAME=basetest
-
-make sim TESTNAME=my_case0
-
-make sim TESTNAME=my_case1
+make sim TESTNAME=basetest
 
 
 ## UVM testbench topology
