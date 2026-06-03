@@ -4,8 +4,8 @@
 class apb_socreboard extends uvm_scoreboard;
 	`uvm_component_utils(apb_socreboard)
 
-	uvm_analysis_port #(apb_transaction) mon_in;
-	uvm_analysis_port #(apb_transaction) mon_out;
+	uvm_analysis_export #(apb_transaction) mon_in;
+	uvm_analysis_export #(apb_transaction) mon_out;
 	uvm_in_order_class_comparator #(apb_transaction) m_comp;
 
 	function new(string name = "apb_socreboard", uvm_component parent = null);
