@@ -98,8 +98,8 @@ uvm_test_top               apb_base_test                       -     @470
           put_export       uvm_put_imp                         -     @806 
         before_export      uvm_analysis_export                 -     @771 
         pair_ap            uvm_analysis_port                   -     @789 
-      mon_in               uvm_analysis_port                   -     @904 
-      mon_out              uvm_analysis_port                   -     @913 
+      mon_in               uvm_analysis_export                 -     @904 
+      mon_out              uvm_analysis_export                 -     @913 
 --------------------------------------------------------------------------
 ```
 
